@@ -67,7 +67,7 @@ else:
     df_sink = spark.sql(
         '''
         SELECT dim_model_key, Model_ID, model_category 
-        FROM PARQUET.`abfss://silver@datalakecarsale.dfs.core.windows.net/carsales`
+        FROM cars_catalog.gold.dim_model
         '''
     )
 
