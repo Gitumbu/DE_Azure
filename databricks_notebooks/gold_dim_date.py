@@ -78,7 +78,7 @@ else:
     df_sink = spark.sql(
         '''
         SELECT dim_date_key, Date_ID 
-        FROM PARQUET.`abfss://silver@datalakecarsale.dfs.core.windows.net/carsales`
+        FROM cars_catalog.gold.dim_date
         '''
     )
 
